@@ -3,13 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <title>Steam Data Visualization</title>
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="js/d3.js"></script>
+    
+    <!-- Load Google Font -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Interactive Steam Data Visualization</h1>
+    <h1>What makes a game on Steam popular?</h1>
     <p>Explore trends in Steam games!</p>
-    <div id="chart"></div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="main-container">
+
+                    <!-- Header -->
+                    <h2>Steam Game Trends</h2>
+                    <h3>Explore Steam Game Trends through interactive data visualizations</h3>
+
+                    <!-- Loading indicator -->
+                    <div id="loading" class="loading">
+                        <div class="spinner"></div>
+                        <p>Loading data...</p>
+                    </div>
+
+                    <!-- Main content (hidden until loaded) -->
+                    <div id="main-content" class="hidden">
+
+
+                        <!-- Controls -->
+                        <div class="controls">
+                            <div class="control-row">
+                                <div class="control-group">
+                                    <label for="metric-select">Genre:</label>
+                                    <select id="metric-select">
+                                        <option value="price">?</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="control-row">
+
+                                <button id="apply-filter-btn">Apply Filters</button>
+                                <button id="reset-filter-btn">Reset All</button>
+                            </div>
+
+                        <!-- Active Filters Display -->
+                        <div class="filter-badges" id="active-filters"></div>
+                    </div>
+
+                    <!-- Main Chart -->
+                    <div class="chart-container">
+                        <div id="main-chart" style="height: 500px; width: 100%"></div>
+                    </div>
+
+                    <!-- Secondary Charts Row -->
+                    <div class="row" style="margin-top: 20px;">
+                        <div class="col-md-6">
+                            <div class="chart-container">
+                                <div id="scatter-plot" style="height: 400px; width: 100%"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="chart-container">
+                                <div id="distribution-chart" style="height: 400px; width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Brush -->
+                    <div class="chart-container">
+                        <div id="timeline" style="height: 120px; width: 100%"></div>
+                    </div>
+
+                    <!-- Data Source -->
+                    <div class="data-source">
+                        <p><strong>Data Source:</strong> <a href=https://www.kaggle.com/datasets/fronkongames/steam-games-dataset> Steam Games Dataset (Kaggle)</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <script src="js/main.js"></script>
+    
 </body>
 </html>
