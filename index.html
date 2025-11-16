@@ -13,8 +13,22 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>What makes a game on Steam popular?</h1>
-    <p>Explore trends in Steam games!</p>
+    <div class="steam-header">
+        <div class="steam-left">
+            <div class="steam-logo">STEAM</div>
+            <div class="steam-title">Steam Game Trends</div>
+        </div>
+        <div class="steam-nav">
+            <a class="nav-item" href="#">Store</a>
+            <a class="nav-item" href="#">Community</a>
+            <a class="nav-item" href="#">About</a>
+        </div>
+    </div>
+
+    <div class="steam-subtitle">
+        <h1>What makes a game on Steam popular?</h1>
+        <p>Explore trends in Steam games!</p>
+    </div>
 
     <div class="container-fluid">
         <div class="row">
@@ -23,7 +37,7 @@
 
                     <!-- Header -->
                     <h2>Steam Game Trends</h2>
-                    <h3>Explore Steam Game Trends through interactive data visualizations</h3>
+                    <h3>Explore Steam Game Trends through interactive data visualizations! Games included are minimum 500,000 owners.</h3>
 
                     <!-- Loading indicator -->
                     <div id="loading" class="loading">
@@ -33,7 +47,6 @@
 
                     <!-- Main content (hidden until loaded) -->
                     <div id="main-content" class="hidden">
-
 
                         <!-- Controls -->
                         <div class="controls">
@@ -47,43 +60,44 @@
                             </div>
 
                             <div class="control-row">
-
                                 <button id="apply-filter-btn">Apply Filters</button>
                                 <button id="reset-filter-btn">Reset All</button>
                             </div>
 
-                        <!-- Active Filters Display -->
-                        <div class="filter-badges" id="active-filters"></div>
-                    </div>
+                            <!-- Active Filters Display -->
+                            <div class="filter-badges" id="active-filters"></div>
+                        </div>
 
-                    <!-- Main Chart -->
-                    <div class="chart-container">
-                        <div id="main-chart" style="height: 500px; width: 100%"></div>
-                    </div>
+                        <!-- Main Chart -->
+                        <div class="chart-container">
+                            <div id="main-chart" style="height: 500px; width: 100%"></div>
+                        </div>
 
-                    <!-- Secondary Charts Row -->
-                    <div class="row" style="margin-top: 20px;">
-                        <div class="col-md-6">
-                            <div class="chart-container">
-                                <div id="scatter-plot" style="height: 400px; width: 100%"></div>
+                        <!-- Secondary Charts Row -->
+                        <div class="row" style="margin-top: 20px;">
+                            <div class="col-md-6">
+                                <div class="chart-container">
+                                    <div id="scatter-plot" style="height: 400px; width: 100%"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="chart-container">
+                                    <div id="distribution-chart" style="height: 400px; width: 100%"></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="chart-container">
-                                <div id="distribution-chart" style="height: 400px; width: 100%"></div>
-                            </div>
+
+                        <!-- Timeline Brush -->
+                        <div class="chart-container">
+                            <div id="timeline" style="height: 120px; width: 100%"></div>
                         </div>
-                    </div>
 
-                    <!-- Timeline Brush -->
-                    <div class="chart-container">
-                        <div id="timeline" style="height: 120px; width: 100%"></div>
-                    </div>
+                        <!-- Data Source -->
+                        <div class="data-source">
+                            <p><strong>Data Source:</strong> <a href="https://www.kaggle.com/datasets/fronkongames/steam-games-dataset"> Steam Games Dataset (Kaggle)</a>
+                            </p>
+                        </div>
 
-                    <!-- Data Source -->
-                    <div class="data-source">
-                        <p><strong>Data Source:</strong> <a href=https://www.kaggle.com/datasets/fronkongames/steam-games-dataset> Steam Games Dataset (Kaggle)</a>
-                        </p>
                     </div>
                 </div>
             </div>
