@@ -1,3 +1,5 @@
+// Written with assistance from Github Copilot
+
 const scatterMargin = { top: 40, right: 40, bottom: 60, left: 80 };
 // New main chart globals
 let mainSvg = null;
