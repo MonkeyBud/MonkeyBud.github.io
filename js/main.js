@@ -18,7 +18,7 @@ let timelineBrush = null;
 let distributionSvg = null;
 let distributionBrush = null;
 
-d3.tsv("data/games.tsv", row => {
+d3.tsv("https://monkeybud.github.io/data/games.tsv", row => {
     row.Releasedate = new Date(row.Releasedate);
     row.Price = +row.Price;
 
